@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link href="/static/fontawesomefree/css/fontawesome.css" rel="stylesheet" type="text/css">
+    <link href="/static/fontawesomefree/css/brands.css" rel="stylesheet" type="text/css">
+    <link href="/static/fontawesomefree/css/solid.css" rel="stylesheet" type="text/css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <title>
+        Home
+    </title>
+    <style>
+        .form-find-cve {
+            background-color: white;
+            padding: 25px;
+            border-radius: 20px;
+            line-height: 30px;
+            margin-top: -100px;
+            margin-bottom: 50px;
+            z-index: 99;
+            position: relative;
+        }
+
+        form>input {
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .button-find {
+            padding: 15px 30px 15px 30px;
+            font-weight: bold;
+        }
+
+        body {
+            background-color: #222831 !important;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .top-right {
+            position: absolute;
+            top: 100px;
+            right: 16px;
+        }
+
+        .image-first {
+            position: relative;
+            color: white;
+        }
+
+        .rectangle {
+            height: 40px;
+            width: 15px;
+            background-color: #0F60DD;
+            float: left;
+        }
+
+        .icon-social>a>img {
+            height: 30px;
+            width: 30px;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/Home.html">CVE'S DAILY ALERT</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="ListCVEs.html">List CVEs</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="SignUp.html">Sign Up</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="image-first">
+        <img src="/media/bg-sec.jpg" style="width: 100%" alt="background">
+        <div class="top-right">
+            <div class="row">
+                <div class="col-6"></div>
+                <div class="col-6">
+                    <h2 style="font-size: 52px">LET'S FIND</h2>
+                    <p>
+                        Technology-based CVE Search, Vulnerabilities and CVEs Suggested based on the technology you are
+                        tracking!
+                    </p>
+                    <div class="row">
+                        <div class="col">
+                            <a href="ListCVEs.html"><button style="width: 100%" class="btn btn-primary">FIND
+                                    NOW</button></a>
+                        </div>
+                        <div class="col">
+                            <button style="width: 100%" class="btn btn-primary">LEARN MORE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="form-find-cve">
+            <h1><b style="color: dodgerblue">FIND</b> <b>YOUR</b> <b style="color: dodgerblue">CVE</b></h1>
+            <p>Find technologies...</p>
+            <form method="post">
+                <input type="hidden" name="csrfmiddlewaretoken"
+                    value="hvP9tafrnmiUzQ6FLv6M47BBoMOLOZc4khXbdkx9FWLiYwRJmBZBKiCurnQEHhYU">
+                <input type="text" name="id_cve" style="width: 100%" placeholder="Find CVE-ID">
+                <button type="submit" class="btn btn-primary button-find">FIND NOW</button>
+            </form>
+        </div>
+        <div class="row">
+            <a style="text-decoration: none;" href="ListCVEs.html">
+                <h2 style="color: white;">
+                    <div class="rectangle"></div>&nbsp;List CVE
+                </h2>
+            </a>
+
+        </div>
+    </div>
+    <br>
+    <div style="background-color: white !important; color: black !important; padding: 20px;">
+        <div class="container">
+            <div class="row">
+                <a style="text-decoration: none;" href="#">
+                    <h2 style="color: black">
+                        <div class="rectangle"></div>&nbsp;Technoligies
+                    </h2>
+                </a>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="/media/bg-sec.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h3 class="card-title">Tech 1</h3>
+                                <p class="card-text">
+                                    Publish Date: xxxx
+                                </p>
+                                <p class="card-text">
+                                    Type: xxxx
+                                </p>
+
+                                <a>
+                                    <button class="btn btn-dark">READ NOW</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="/media/bg-sec.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h3 class="card-title">Tech 2</h3>
+                                <p class="card-text">
+                                    Publish Date: xxxx
+                                </p>
+                                <p class="card-text">
+                                    Type: xxxx
+                                </p>
+
+                                <a>
+                                    <button class="btn btn-dark">READ NOW</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="/media/bg-sec.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h3 class="card-title">Tech 3</h3>
+                                <p class="card-text">
+                                    Publish Date: xxxx
+                                </p>
+                                <p class="card-text">
+                                    Type: xxxx
+                                </p>
+
+                                <a>
+                                    <button class="btn btn-dark">READ NOW</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <a href="#" style="text-decoration: none;">
+                    <h2 style="color: black">
+                        <div class="rectangle"></div>&nbsp;Lastest News
+                    </h2>
+                </a>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="/media/bg-sec.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h3 class="card-title">News 1</h3>
+                                <p class="card-text">
+                                    Publish Date: xxxx
+                                </p>
+                                <p class="card-text">
+                                    Type: xxxx
+                                </p>
+
+                                <a>
+                                    <button class="btn btn-dark">READ NOW</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="/media/bg-sec.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h3 class="card-title">News 2</h3>
+                                <p class="card-text">
+                                    Publish Date: xxxx
+                                </p>
+                                <p class="card-text">
+                                    Type: xxxx
+                                </p>
+
+                                <a>
+                                    <button class="btn btn-dark">READ NOW</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="/media/bg-sec.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h3 class="card-title">News 3</h3>
+                                <p class="card-text">
+                                    Publish Date: xxxx
+                                </p>
+                                <p class="card-text">
+                                    Type: xxxx
+                                </p>
+
+                                <a>
+                                    <button class="btn btn-dark">READ NOW</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <footer style="background-color: black; color: white;">
+        <div class="row" style="padding: 30px">
+            <div class="col">
+                <h3>QUICK LINKS</h3>
+                <p>Go fast to your destination</p>
+                <a href="/Home.html">
+                    <p style="color: royalblue">Home</p>
+                </a>
+                <a href="/Home.html">
+                    <p style="color: royalblue">Dashboard</p>
+                </a>
+                <a href="ListCVEs.html">
+                    <p style="color: royalblue">Finding</p>
+                </a>
+                <a href="Profile.html">
+                    <p style="color: royalblue">Profile</p>
+                </a>
+            </div>
+            <div class="col icon-social">
+                <h3>ABOUT</h3>
+                <a href="https://www.facebook.com/profile.php?id=100088244351596"><img alt="icon-facebook"
+                        src="/media/icon-fb.png" /></a>
+                <a
+                    href="https://www.instagram.com/daily_cve_alert?fbclid=IwAR1QpxhZaR_wnf5HqTA2mB_v1WpHZPNdA5HtfX1aNbYDmdnYoBxOcI0W-5I"><img
+                        alt="icon-instagram" src="/media/icon-instagram.png" /></a>
+                <a
+                    href="https://www.linkedin.com/in/cve-alert-b700302b2/?fbclid=IwAR3H40amSM3V8WjmfHPOdMOso3yIcrqShPfhPIIIIxHakuGTUyVXNIV31Cc"><img
+                        alt="icon-linkedin" src="/media/icon-linkedin.png" /></a>
+                <a
+                    href="https://twitter.com/CveDailyAlert?fbclid=IwAR0Sq2jk2gQs_pO3M4T18g7YFnKPlriPPuZVn4Uo9sDSIGjGRtkIScP26HY"><img
+                        alt="icon-twitter" src="/media/icon-twitter.png" /></a>
+            </div>
+            <div class="col">
+                <h3>FOR DEV OWNER</h3>
+                <p>We value our CVE listings and are committed to providing support and the latest vulnerabilities based
+                    on the technologies our users follow.</p>
+                <h3>BECOME OUR PARTNER</h3>
+                <p>Interested in becoming our partner? Contact us here</p>
+                <a href="mailto:CveDailyAlert@gmail.com">
+                    <p><b style="color: white">Email: CveDailyAlert@gmail.com</b></p>
+                </a>
+                <p><b>Phone number: 1900010000</b></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

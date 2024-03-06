@@ -15,17 +15,29 @@
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             crossorigin="anonymous"></script>
     <title>
-    Đổi mật khẩu
+    Setting Notification
 </title>
     <style>
         
-    .form-change-pass > input {
+    .form-edit-profile > input {
     width: 100%;
     margin-bottom: 20px;
     border-radius: 5px;
     }
-    .form-change-pass > button {
+    .form-edit-profile > button {
     width: 50%;
+    }
+    body {
+    background-color: white !important;
+    }
+    input, select, textarea {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+    }
+    .form-edit-avatar {
+    text-align: center;
     }
     .list-page-profile > p > a {
     color: black;
@@ -34,16 +46,6 @@
     }
     .list-page-profile > p > .active {
     color: dodgerblue;
-    }
-    body {
-    background-color: white !important;
-    }
-    .alert-msg {
-        background-color: #f76f6f;
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-        border-color: red;
     }
 
         .icon-social > a > img {
@@ -69,9 +71,14 @@
                 <a class="nav-link" href="ListCVEs.html">List CVEs</a>
             </li>
             
+            
+               
                 <li class="nav-item">
                     <a class="nav-link" href="Login.html">Logout</a>
                 </li>
+            
+            
+        
             
         </ul>
     </div>
@@ -84,32 +91,35 @@
                     <a href="Profile.html">Personal Info</a>
                 </p>
                 <p>
-                    <a class="active" href="ChangePassWord.html">Password</a>
+                    <a href="ChangePassWord.html">Password</a>
                 </p>
                 <p>
                     <a href="#">Tech Follow</a>
                 </p>
                 <p>
-                    <a href="Notification_user.html">Setting Notification</a>
+                    <a class="active" href="/account/notification/">Setting Notification</a>
                 </p>
             </div>
             <div class="col-6">
-                <h2>Change Password</h2>
-                
-                <form method="post" class="form-change-pass">
-                   
-                    <label for="old_password">
-                        Old Password
-                    </label>
-                    <input type="password" name="old_password" id="old_password"/><br>
-                    <label for="password1">
-                        New Password
-                    </label>
-                    <input type="password" name="your_news_password1" id="password1"/><br>
-                    <label for="password2">
-                        Confirm Password
-                    </label>
-                    <input type="password" name="your_news_password2" id="password2"/><br>
+                <form method="post" class="form-edit-profile" enctype="multipart/form-data">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="pg2mgXSbpzIVKThC5PUVx1bYz7MnrOCvtt13f90xGuWI6nxfsTaskEiqqt1d7VPO">
+                    <h2><b>YOUR</b> <b style="color: dodgerblue">NOTIFICATION</b></h2>
+                    <label for="status">Status</label>
+                    <select name="status" id="status">
+                        
+                            <option value="telegram">Telegram (current: gmail)</option>
+                        
+                            <option value="gmail">Gmail (current: gmail)</option>
+                        
+                            <option value="all">All (current: gmail)</option>
+                        
+                    </select>
+                    <label for="email_address">Email Address</label>
+                    <input type="email" name="email_address" id="email_address" >
+                    <label for="token_bot">Token Bot</label>
+                    <input type="text" name="token_bot" id="token_bot">
+                    <label for="chat_id">Chat ID</label>
+                    <input type="text" name="chat_id" id="chat_id" >
                     <button type="submit" class="btn btn-primary">SAVE</button>
                 </form>
             </div>
@@ -122,8 +132,8 @@
         <div class="col">
             <h3>QUICK LINKS</h3>
             <p>Go fast to your destination</p>
-            <a href="/"><p style="color: royalblue">Home</p></a>
-            <a href="/"><p style="color: royalblue">Dashboard</p></a>
+            <a href="/Home.html"><p style="color: royalblue">Home</p></a>
+            <a href="/Home.html"><p style="color: royalblue">Dashboard</p></a>
             <a href="ListCVEs.html"><p style="color: royalblue">Finding</p></a>
             <a href="Profile.html"><p style="color: royalblue">Profile</p></a>
         </div>
